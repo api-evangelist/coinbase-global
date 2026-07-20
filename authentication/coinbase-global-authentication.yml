@@ -1,0 +1,44 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.cdp.coinbase.com/get-started/authentication/overview
+docs: https://docs.cdp.coinbase.com/get-started/authentication/overview
+summary:
+  types: [apiKey, http, oauth2]
+  api_key_in: [header]
+  oauth2_flows: [authorizationCode]
+schemes:
+  - name: CDP JWT Bearer
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+    description: >-
+      Coinbase Developer Platform API v2 / Advanced Trade authenticate server
+      requests with a short-lived JWT signed by the project's API key
+      (Ed25519 or EC key pair). See JWT Authentication docs.
+    docs: https://docs.cdp.coinbase.com/get-started/authentication/jwt-authentication
+    products: [CDP API v2, Advanced Trade API]
+  - name: Wallet Secret
+    type: apiKey
+    in: header
+    description: >-
+      Non-custodial wallet write operations additionally require a wallet
+      secret configured in the CDP portal.
+    docs: https://docs.cdp.coinbase.com/get-started/authentication/security-best-practices
+    products: [CDP Wallets]
+  - name: Coinbase App API Key (HMAC)
+    type: apiKey
+    in: header
+    description: >-
+      The legacy Coinbase App / Sign in with Coinbase (API v2) supports API key
+      + secret with an HMAC request signature (CB-ACCESS-KEY / CB-ACCESS-SIGN).
+    products: [Coinbase App API v2]
+  - name: OAuth2
+    type: oauth2
+    description: >-
+      Sign in with Coinbase (Coinbase App API) supports OAuth2 authorization
+      code flow for delegated end-user access.
+    flows:
+      authorizationCode:
+        authorizationUrl: https://login.coinbase.com/oauth2/auth
+        tokenUrl: https://login.coinbase.com/oauth2/token
+    products: [Coinbase App API v2, Sign in with Coinbase]
