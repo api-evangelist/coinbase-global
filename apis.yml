@@ -1,23 +1,159 @@
 aid: coinbase-global
 name: Coinbase Global
-description: Coinbase Global is a company surfaced as a portfolio company of battery-ventures and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Coinbase Global, Inc. is a publicly traded cryptocurrency platform that
+  operates a retail exchange, an institutional trading and custody business
+  (Coinbase Prime), and the Coinbase Developer Platform (CDP) — a suite of
+  APIs, SDKs, and onchain tooling for wallets, payments, trading, staking, and
+  AI agents. Developers build against the CDP API v2, the Advanced Trade API,
+  the Coinbase App (Sign in with Coinbase) API, the Exchange and Prime APIs, and
+  Coinbase Commerce, with authentication via short-lived JWTs signed by project
+  API keys. CDP ships first-party TypeScript and Python SDKs, a CLI that doubles
+  as a local MCP server, AgentKit for AI agents, webhooks, and idempotent write
+  semantics. This profile was added to the API Evangelist network from a
+  venture-portfolio lead and enriched from Coinbase's public developer surface.
 url: https://raw.githubusercontent.com/api-evangelist/coinbase-global/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/1885080?s=200&v=4
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - battery-ventures
-x-tier: stub
+x-tier: enriched
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Cryptocurrency
+- Blockchain
+- Payments
+- Wallets
+- Trading
+- Onchain
+- Web3
+- Financial Services
+- Developer Platform
+- AI Agents
+- Stablecoins
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Coinbase Developer Platform (CDP) API
+  description: >-
+    Core CDP API v2 for onchain wallets, payments, trading, faucets, policies,
+    and JSON-RPC access, authenticated with short-lived JWTs.
+  humanURL: https://docs.cdp.coinbase.com/api-reference
+  baseURL: https://api.cdp.coinbase.com
+  properties:
+  - type: Documentation
+    url: https://docs.cdp.coinbase.com
+  - type: APIReference
+    url: https://docs.cdp.coinbase.com/api-reference
+- name: Coinbase Advanced Trade API
+  description: >-
+    Programmatic spot trading, order management, and market data for the
+    Coinbase retail exchange (Advanced Trade).
+  humanURL: https://docs.cdp.coinbase.com/advanced-trade/docs/welcome
+  baseURL: https://api.coinbase.com
+- name: Coinbase App API (Sign in with Coinbase)
+  description: >-
+    Retail Coinbase App API v2 for accounts, addresses, transactions, buys/sells,
+    with OAuth2 and API-key HMAC authentication.
+  humanURL: https://docs.cdp.coinbase.com/coinbase-app/docs/welcome
+  baseURL: https://api.coinbase.com
+- name: Coinbase Exchange API
+  description: >-
+    Institutional/pro exchange REST and WebSocket API for order books, trading,
+    and market data.
+  humanURL: https://docs.cdp.coinbase.com/exchange/docs/welcome
+  baseURL: https://api.exchange.coinbase.com
+- name: Coinbase Prime API
+  description: >-
+    Institutional trading, custody, and portfolio management API for Coinbase
+    Prime.
+  humanURL: https://docs.cdp.coinbase.com/prime/introduction/welcome
+  baseURL: https://api.prime.coinbase.com
+- name: Coinbase Commerce API
+  description: >-
+    Crypto payments/checkout API for accepting cryptocurrency payments.
+  humanURL: https://docs.cdp.coinbase.com/commerce-onchain/docs/welcome
+  baseURL: https://api.commerce.coinbase.com
+common:
+- type: DomainSecurity
+  url: security/coinbase-global-domain-security.yml
+- type: DeveloperPortal
+  url: https://portal.cdp.coinbase.com
+- type: Documentation
+  url: https://docs.cdp.coinbase.com
+- type: APIReference
+  url: https://docs.cdp.coinbase.com/api-reference
+- type: GettingStarted
+  url: https://docs.cdp.coinbase.com/get-started/overview
+- type: SignUp
+  url: https://portal.cdp.coinbase.com
+- type: Blog
+  url: https://www.coinbase.com/blog
+- type: GitHubOrganization
+  url: https://github.com/coinbase
+- type: Support
+  url: https://docs.cdp.coinbase.com/support/welcome
+- type: StatusPage
+  url: https://status.coinbase.com
+- type: ChangeLog
+  url: https://docs.cdp.coinbase.com/get-started/changelog
+- type: TermsOfService
+  url: https://www.coinbase.com/legal/user_agreement
+- type: PrivacyPolicy
+  url: https://www.coinbase.com/legal/privacy
+- type: Pricing
+  url: https://www.coinbase.com/advanced-fees
+# --- Enrichment artifacts ---
+- type: Packages
+  url: packages/coinbase-global-packages.yml
+- type: SDKs
+  url: packages/coinbase-global-packages.yml
+- type: CLI
+  url: cli/coinbase-global-cli.yml
+- type: MCPServer
+  url: mcp/coinbase-global-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/coinbase-global-llms.txt
+- type: WellKnown
+  url: well-known/coinbase-global-well-known.yml
+- type: SecurityTxt
+  url: well-known/coinbase-global-security.txt
+- type: VulnerabilityDisclosure
+  url: security/coinbase-global-vulnerability-disclosure.yml
+- type: Security
+  url: https://hackerone.com/coinbase
+- type: Authentication
+  url: authentication/coinbase-global-authentication.yml
+- type: Conventions
+  url: conventions/coinbase-global-conventions.yml
+- type: Idempotency
+  url: conventions/coinbase-global-conventions.yml
+- type: Webhooks
+  url: asyncapi/coinbase-global-webhooks.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

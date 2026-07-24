@@ -1,0 +1,16 @@
+generated: '2026-07-18'
+method: searched
+host: https://www.coinbase.com
+documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: coinbase-global-security.txt
+    note: RFC 9116; Contact points to hackerone.com/coinbase; Expires 2024-06-01 (stale).
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

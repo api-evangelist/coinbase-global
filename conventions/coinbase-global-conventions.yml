@@ -1,0 +1,32 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.cdp.coinbase.com/api-reference/v2/introduction
+authentication:
+  style: JWT Bearer (short-lived, signed by API key); wallet secret for wallet writes
+  docs: https://docs.cdp.coinbase.com/get-started/authentication/overview
+  ref: authentication/coinbase-global-authentication.yml
+idempotency:
+  supported: true
+  mechanism: Idempotency key on write requests to safely retry without duplicate side effects
+  docs: https://docs.cdp.coinbase.com/api-reference/v2/idempotency
+rate_limiting:
+  supported: true
+  signaling: Documented throughput constraints with backoff guidance
+  docs: https://docs.cdp.coinbase.com/api-reference/v2/rate-limits
+errors:
+  format: Typed error responses with troubleshooting semantics
+  docs: https://docs.cdp.coinbase.com/api-reference/v2/errors
+webhooks:
+  supported: true
+  signature_verification: true
+  docs: https://docs.cdp.coinbase.com/webhooks/overview
+  verify: https://docs.cdp.coinbase.com/webhooks/verify-signatures
+  ref: asyncapi/coinbase-global-webhooks.yml
+api_surfaces:
+  rest: true
+  json_rpc: true
+  json_rpc_docs: https://docs.cdp.coinbase.com/api-reference/json-rpc-api/core
+versioning:
+  scheme: uri-path (v2)
+  docs: https://docs.cdp.coinbase.com/api-reference/v2/introduction
+status_page: https://docs.cdp.coinbase.com/support/status

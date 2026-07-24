@@ -1,0 +1,10 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.cdp.coinbase.com/get-started/changelog
+changelog_url: https://docs.cdp.coinbase.com/get-started/changelog
+scheme: dated product and documentation release updates
+description: >-
+  Coinbase Developer Platform publishes a dated changelog of product and
+  documentation release updates. Entries not individually harvested in this
+  pass; the live changelog is the source of truth.
+entries: []
