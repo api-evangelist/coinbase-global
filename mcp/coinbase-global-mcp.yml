@@ -8,30 +8,37 @@ server:
   hosted: false
   run: cdp mcp
   install:
-    - claude mcp add --scope user --transport stdio cdp -- cdp mcp
-    - claude mcp add --scope user --transport stdio cdp -- npx -y @coinbase/cdp-cli mcp
+  - claude mcp add --scope user --transport stdio cdp -- cdp mcp
+  - claude mcp add --scope user --transport stdio cdp -- npx -y @coinbase/cdp-cli mcp
   config:
     command: cdp
-    args: [mcp]
+    args:
+    - mcp
     transport: stdio
-notes: >-
-  The Coinbase Developer Platform CLI (@coinbase/cdp-cli) ships an embedded MCP
-  server run locally over stdio via `cdp mcp`. Tools are generated dynamically
-  from an embedded OpenAPI spec, so new CDP API endpoints appear automatically
-  when the CLI updates. All tools are prefixed `cdp_`.
+notes: The Coinbase Developer Platform CLI (@coinbase/cdp-cli) ships an embedded MCP server run locally
+  over stdio via `cdp mcp`. Tools are generated dynamically from an embedded OpenAPI spec, so new CDP
+  API endpoints appear automatically when the CLI updates. All tools are prefixed `cdp_`.
 tools:
-  - name: cdp_env
-    description: Show/inspect the active CDP environment (key + wallet indicators).
-  - name: cdp_set_env
-    description: Configure the active CDP environment.
-  - name: cdp_help
-    description: Discover available commands/tools.
-  - name: cdp_template
-    description: Retrieve request templates for API operations.
-  - name: cdp_evm_accounts_create
-    description: Create an EVM account (non-custodial wallet).
-  - name: cdp_evm_accounts_sign_message
-    description: Sign a message with an EVM account.
+- name: cdp_env
+  description: Show/inspect the active CDP environment (key + wallet indicators).
+- name: cdp_set_env
+  description: Configure the active CDP environment.
+- name: cdp_help
+  description: Discover available commands/tools.
+- name: cdp_template
+  description: Retrieve request templates for API operations.
+- name: cdp_evm_accounts_create
+  description: Create an EVM account (non-custodial wallet).
+- name: cdp_evm_accounts_sign_message
+  description: Sign a message with an EVM account.
 tool_families:
-  - "cdp_<resource>_<action> — one typed tool per CDP API operation (EVM/Solana accounts, transactions, policies, faucet, swaps, payments, onramp, webhooks, ...)."
-  - "Bundled skills — pre-built workflows for account creation, transaction signing/sending, token swaps, and more."
+- cdp_<resource>_<action> — one typed tool per CDP API operation (EVM/Solana accounts, transactions, policies,
+  faucet, swaps, payments, onramp, webhooks, ...).
+- Bundled skills — pre-built workflows for account creation, transaction signing/sending, token swaps,
+  and more.
+deployment:
+  mode: local-stdio
+  verified: searched
+  tools: 6
+  checked: '2026-08-12'
+  source: catalog MCP census
