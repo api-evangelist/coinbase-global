@@ -119,6 +119,8 @@ apis:
   humanURL: https://docs.cdp.coinbase.com/commerce-onchain/docs/welcome
   baseURL: https://api.commerce.coinbase.com
 common:
+- type: Website
+  url: https://www.coinbase.com/
 - type: DomainSecurity
   url: security/coinbase-global-domain-security.yml
 - type: DeveloperPortal
