@@ -64,6 +64,29 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-This profile has been **merged into [coinbase](https://apis.io/providers/coinbase/)** — the two records described the same company, and that one is canonical.
+> **Retired — merged into [Coinbase](https://apis.io/providers/coinbase/).** The two records described the same company, and that one is canonical. Nothing in this repository is maintained any more.
 
-Nothing here is maintained any more. The company's current profile, rating and artifacts are at [apis.io/providers/coinbase/](https://apis.io/providers/coinbase/).
+**Why:** Duplicate of coinbase (same company, coinbase.com). coinbase-global is kept as the holding-company profile (Coinbase Global, Inc.) with no APIs; its six doc-only product entries (CDP, Advanced Trade, App / Sign in with Coinbase, Exchange, Prime, Commerce) and the artifacts coinbase lacked (packages, CLI, agent skill, llms.txt, well-known, conventions) were moved into coinbase with x-moved-from. API pages map 1:1 to the moved coinbase entries; artifacts map 1:1 where an equivalent exists, otherwise to the provider page. Approved by Kin Lane 2026-10-13.
+
+**Retired:** 2026-10-13
+
+## Where to go now
+
+The current profile, APIs, artifacts and rating for Coinbase are on APIs.io at **[apis.io/providers/coinbase/](https://apis.io/providers/coinbase/)**.
+
+Pages that used to belong to this profile now live at:
+
+- [Coinbase Advanced Trade API](https://apis.io/apis/coinbase/coinbase-advanced-trade-api/)
+- [Coinbase App API Sign In With Coinbase](https://apis.io/apis/coinbase/coinbase-app-api-sign-in-with-coinbase/)
+- [Coinbase Commerce API](https://apis.io/apis/coinbase/coinbase-commerce-api/)
+- [Coinbase Developer Platform Cdp API](https://apis.io/apis/coinbase/coinbase-developer-platform-cdp-api/)
+- [Coinbase Exchange API](https://apis.io/apis/coinbase/coinbase-exchange-api/)
+- [Coinbase Prime API](https://apis.io/apis/coinbase/coinbase-prime-api/)
+- [Coinbase Webhooks](https://apis.io/asyncapis/coinbase/coinbase-webhooks/)
+- [Coinbase Authentication](https://apis.io/security/coinbase/coinbase-authentication/)
+- [Coinbase Domain Security](https://apis.io/security/coinbase/coinbase-domain-security/)
+- [Coinbase Vulnerability Disclosure](https://apis.io/security/coinbase/coinbase-vulnerability-disclosure/)
+
+## Open an issue
+
+Issues about Coinbase belong on the canonical profile: [open one on api-evangelist/coinbase](https://github.com/api-evangelist/coinbase/issues/new). If you think this merge was a mistake — these were really two companies — say so there or email [info@apievangelist.com](mailto:info@apievangelist.com).
